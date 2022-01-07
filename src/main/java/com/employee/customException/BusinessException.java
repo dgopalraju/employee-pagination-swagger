@@ -1,6 +1,7 @@
 package com.employee.customException;
 
 import lombok.AllArgsConstructor;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,5 +13,5 @@ import lombok.Setter;
 public class BusinessException {
 	private int errorCode;
 	private String errorMessage;
-
+	private String traceId;
 }

@@ -2,6 +2,9 @@ package com.employee.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import com.employee.model.Employee;
 
 public interface EmployeeService {
@@ -21,5 +24,13 @@ public interface EmployeeService {
 	void deleteEmployeeByName(String name) throws Exception;
 
 	List<Integer> getAllEmployeesId() throws Exception;
+
+	Page<Employee> getEmployeeUsingPagination(int offset, int pageSize) throws Exception;
+
+	Page<Employee> getAllEMP(Pageable pageable) throws Exception;
+
+	List<Employee> getByDTO();
+	
+	Employee getByDTOEmp(Employee emp);
 
 }
